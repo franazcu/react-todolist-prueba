@@ -1,0 +1,74 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+input {
+  padding: 5px;
+  margin: 10px;
+}
+
+.task-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+.task-card {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 2rem;
+}
+
+.task-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #444;
+}
+
+/* .task-form {
+  background-color: #444;
+}rgb(68, 68, 68)rgb(255, 97, 30)rgb(255, 142, 30)rgb(255, 128, 0) */

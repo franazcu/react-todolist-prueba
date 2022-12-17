@@ -1,0 +1,7 @@
+.task-item-color-active {
+  background-color: #470000;
+}
+
+.task-item-color-inactive {
+  background-color: rgb(33, 100, 62);
+}
