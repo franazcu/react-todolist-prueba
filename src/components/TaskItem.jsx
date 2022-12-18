@@ -3,7 +3,7 @@ import { TaskContext } from '../context/TaskContext';
 import '../style/TaskItem.css';
 
 export function TaskItem({ task }) {
-  const { deleteTask, clickTask } = useContext(TaskContext);
+  const { deleteTask, toggleTask } = useContext(TaskContext);
 
   return (
     <div
@@ -13,8 +13,9 @@ export function TaskItem({ task }) {
           : 'task-card task-item-color-inactive'
       }
     >
-      <h3>{task.title}</h3>
-      <p>{task.description}</p>
+      <h3 style={{textTransform: 'uppercase'}}>{task.title}</h3>
+      <hr />
+      <p style={{textTransform: 'full-width', fontSize: '21px'}}>{task.description}</p>
       <button
         style={{ backgroundColor: 'darkred', margin: '5px' }}
         onClick={() => deleteTask(task.id)}
@@ -24,14 +25,14 @@ export function TaskItem({ task }) {
       {task.active ? (
         <button
           style={{ backgroundColor: 'darkgreen', margin: '5px' }}
-          onClick={() => clickTask(task.id)}
+          onClick={() => toggleTask(task.id)}
         >
           Completar
         </button>
       ) : (
         <button
           style={{ backgroundColor: 'rgb(200, 100, 0)', margin: '5px' }}
-          onClick={() => clickTask(task.id)}
+          onClick={() => toggleTask(task.id)}
         >
           Descmarcar
         </button>

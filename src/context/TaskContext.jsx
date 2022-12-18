@@ -18,21 +18,29 @@ export function TaskContextProvider(props) {
         title: title,
         id: uuidv4(),
         description: description,
-        active: true
+        active: true,
       },
     ]);
   }
 
-  function clickTask (taskId) {
-    const updatedTasks = tasks.map (task => {
-        if (task.id === taskId) {
-          task.active = !task.active;
-        }
-        return task //VER SI FUNCIONA ADENTRO DEL IF
-      });
-      setTasks(updatedTasks)
+  function toggleTask(taskId) {
+    const updatedTasks = tasks.map((task) =>
+      task.id === taskId ? { ...task, active: !task.active } : task
+    );
+    setTasks(updatedTasks);
   }
-  
+
+  // ---- OTRA FORMA CON IF ----
+
+  // function toggleTask (taskId) {
+  //   const updatedTasks = tasks.map (task => {
+  //       if (task.id === taskId) {
+  //         task.active = !task.active;
+  //       }
+  //       return task //VER SI FUNCIONA ADENTRO DEL IF
+  //     });
+  //     setTasks(updatedTasks)
+  // }
 
   useEffect(() => {
     setTasks(data);
@@ -44,7 +52,7 @@ export function TaskContextProvider(props) {
         tasks,
         deleteTask,
         createTask,
-        clickTask
+        toggleTask,
       }}
     >
       {props.children}
