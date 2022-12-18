@@ -6,7 +6,7 @@ import { TaskForm } from './components/TaskForm';
 function App() {
   return (
     <div className='App'>
-      <h1>Lista de tareas</h1>
+      <h1>TASK LIST</h1>
       <TaskForm />
       <TaskList />
     </div>
