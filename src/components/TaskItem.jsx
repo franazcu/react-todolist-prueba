@@ -15,7 +15,7 @@ export function TaskItem({ task }) {
     >
       <h3 style={{textTransform: 'uppercase'}}>{task.title}</h3>
       <hr />
-      <p style={{textTransform: 'full-width', fontSize: '21px'}}>{task.description}</p>
+      <p style={{textTransform: 'capitalize', fontSize: '21px'}}>{task.description}</p>
       <button
         style={{ backgroundColor: 'darkred', margin: '5px' }}
         onClick={() => deleteTask(task.id)}
